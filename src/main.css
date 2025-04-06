@@ -1,0 +1,8 @@
+:root {
+    font-family:  "Princess Sofia", sans-serif;
+    font-size: 100px;
+    --background: #67542E;
+    --bright-white: #EECCC2;
+    background-color: var(--background);
+    color: var(--bright-white);
+  }
