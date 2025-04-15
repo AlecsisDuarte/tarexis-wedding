@@ -1,6 +1,6 @@
 {
   "name": "ta-wedding-app",
-  "private": false,
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://alecsisduarte.github.io/tarexis-wedding",
