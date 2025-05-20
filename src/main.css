@@ -1,7 +1,7 @@
 :root {
     font-family:  "Princess Sofia", sans-serif;
     font-size: 100px;
-    --background: #67542E;
+    --background: #F0D5C4;
     --bright-white: #EECCC2;
     background-color: var(--background);
     color: var(--bright-white);
@@ -9,9 +9,16 @@
     padding: 0 !important;
   }
 
+    @font-face {
+      font-family: 'Wilden'; /* Choose a name for your font */
+      src: url('./assets/fonts/Wilden.otf') format('opentype'); /* Path to your font file */
+      font-weight: normal; /* Define font weight if needed */
+      font-style: normal; /* Define font style if needed */
+    }
+    
   img{
     max-width: 100vw;
-    max-height: 100vh;
+    max-height: 150vh;
   }
   .std-main{
     display: flex;
