@@ -11,9 +11,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <div className="std-main">
          <img src={std}></img>
         </div>
-        <div>
-            Test
-        </div>
     </div>
     </BrowserRouter>
   </React.StrictMode>,
