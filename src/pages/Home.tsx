@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import dict from "../Dictionary.json";
 
 const Home = () => {
-    const lang  = navigator.language;
+  const lang = navigator.language;
 
-    return (
+  return (
     <div>
       <div className="std-main">
         <img src={std}></img>
