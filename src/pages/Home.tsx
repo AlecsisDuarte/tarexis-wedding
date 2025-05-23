@@ -22,7 +22,6 @@ const Home: FC<Props> = (prop) => {
       <Link to="/rsvp" className="redirect-button">
         RSVP
       </Link>
-      <p>{navigator.language}</p>
     </div>
   );
 };
