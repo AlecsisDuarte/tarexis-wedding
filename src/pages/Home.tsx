@@ -1,18 +1,22 @@
 import "../main.css";
 import std from "../assets/std.png";
+import {FC } from "react";
 import { Link } from "react-router-dom";
 import dict from "../Dictionary.json";
 
-const Home = () => {
-  const lang = navigator.language;
+type Props = {
+    lang: string;
+};
 
+const Home: FC<Props> = (prop) => {
+    const words = dict[prop.lang];
   return (
     <div>
       <div className="std-main">
         <img src={std}></img>
       </div>
       <Link to="/travel" className="redirect-button">
-        {dict[lang].travel}
+        {words.travel}
       </Link>
       <Link to="/rsvp" className="redirect-button">
         RSVP

@@ -4,13 +4,18 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "./pages/home";
 import Travel from "./pages/travel";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <BrowserRouter basename={"/tarexis-wedding/"}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/travel" element={<Travel />} />
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
-);
+const App = () => {
+  const lang = navigator.language.split("-")[0];
+  return (
+    <React.StrictMode>
+      <BrowserRouter basename={"/tarexis-wedding/"}>
+        <Routes>
+          <Route path="/" element={<Home lang={lang} />} />
+          <Route path="/travel" element={<Travel />} />
+        </Routes>
+      </BrowserRouter>
+    </React.StrictMode>
+  );
+};
+
+ReactDOM.createRoot(document.getElementById("root")!).render(<App />);
