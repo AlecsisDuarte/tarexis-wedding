@@ -1,0 +1,26 @@
+.std-main {
+  font-family: "Princess Sofia", sans-serif;
+  background-color: #67542e;
+  margin: 0;
+  padding: 0 !important;
+}
+
+div img {
+    display: flex; /* Enables Flexbox for centering */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    min-height: 100vh; /* Ensures the div takes at least the full viewport height */
+    overflow: hidden; /* Hides any overflow if the image is larger than the screen */
+    margin: 0; /* Removes default body margin */
+    padding: 0; /* Removes default body padding */
+    width: 100%; /* Ensures the div takes full width */
+}
+
+img {
+    max-width: 100%; /* Ensures the image scales down to fit the screen width */
+    max-height: 100vh; /* Ensures the image scales down to fit the screen height */
+    height: auto; /* Maintains the image's aspect ratio */
+    width: auto; /* Maintains the image's aspect ratio */
+    display: block; /* Removes extra space below the image */
+    object-fit: contain; /* Ensures the entire image is visible within its bounds */
+}

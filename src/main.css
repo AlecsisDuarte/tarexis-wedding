@@ -1,22 +1,39 @@
 :root {
   font-family: "Princess Sofia", sans-serif;
-  font-size: 100px;
-  --background: #F0D5C4;
-  --bright-white: #EECCC2;
-  background-color: var(--background);
-  color: var(--bright-white);
+  --background: #f0d5c4;
+  --bright-white: #eeccc2;
+  /* background-color: var(--background); */
+}
+
+body {
   margin: 0;
   padding: 0 !important;
 }
 
 @font-face {
-  font-family: 'Wilden';
-  src: url('./assets/fonts/Wilden.otf') format('opentype'),
-    url('/assets/fonts/Wilden.otf') format('opentype');
+  font-family: "Wilden";
+  src: url("./assets/fonts/Wilden.otf") format("opentype"),
+    url("/assets/fonts/Wilden.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
+@font-face {
+  font-family: Luminaire;
+  src: url("./assets/fonts/Luminaire-Script-Regular.otf") format("opentype"),
+    url("/assets/fonts/Luminaire-Script-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: MorningBrew;
+  src: url("./assets/fonts/MorningBrew-Regular.ttf") format("opentype"),
+    url("/assets/fonts/MorningBrew-Regular.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* 
 img {
   max-width: 100vw;
   max-height: 150vh;
@@ -25,27 +42,10 @@ img {
     max-height: 70vh;
     max-width: none;
   }
-}
+} */
 
-.std-main {
+/* .std-main {
   display: flex;
   justify-content: center;
   align-content: center;
-}
-
-.redirect-button {
-  font-family: 'Wilden', sans-serif;
-  font-size: 100px;
-  text-align: center;
-  margin: 0;
-  padding: 10px !important;
-  background-color: transparent;
-  border: none;
-}
-
-p.wilden {
-  font-family: 'Wilden', sans-serif;
-  font-size: 100px;
-  text-align: center;
-  margin: 0;
-}
+}*/

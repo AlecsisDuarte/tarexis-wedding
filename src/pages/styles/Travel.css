@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  --color-pastel-peach: #f0d5c4; /* Approximates #F0D5C4 */
+  --color-pastel-pink: #eeccc2; /* Approximates #EECCC2 */
+  --color-earthy-brown: #67542e; /* Exact #67542e - Primary accent */
+  --color-light-rose: #fce7f3; /* A lighter pink for subtle accents */
+  --color-light-pink-accent: #fbcfe8; /* A slightly stronger pink for subtle accents */
+}
+
+.travel-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--bright-white);
+}
+
+.travel-main body {
+  font-family: "Princess Sofia", sans-serif;
+  box-sizing: border-box;
+}
+
+/* TravelInfo.css */
+
+.travel-info {
+  background-color: #f8e1d6;
+  color: #7c3f34;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+.travel-container {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.travel-title {
+  font-family: Wilden;
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.travel-section {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.section-paragraph {
+  margin-bottom: 0.5rem;
+}
+
+.travel-list {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-left: 0.5rem;
+}
+
+.group-bus {
+  margin-top: 1rem;
+}
+
+.group-bus-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.travel-link {
+  color: #a5392f;
+  text-decoration: underline;
+}
+
+.travel-link:hover {
+  color: #d94c3a;
+}
+
