@@ -3,6 +3,7 @@ import React from "react";
 
 const Travel: React.FC = () => {
   return (
+    <div className="travel">
     <div className="travel-info">
       <div className="travel-container">
         <h1 className="travel-title">Getting to Valle de Guadalupe, Mexico</h1>
@@ -137,6 +138,7 @@ const Travel: React.FC = () => {
           </ul>
         </section>
       </div>
+    </div>
     </div>
   );
 };

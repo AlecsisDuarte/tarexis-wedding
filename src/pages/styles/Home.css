@@ -1,0 +1,24 @@
+div .home {
+    background-color: #f0d5c4;
+}
+div .home .std-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.home img {
+    /* Set the image height to 100% of the viewport height */
+    height: 100vh;
+
+    /* Set the width to fill the screen */
+    width: 100vw;
+
+    /* This property handles how the image fits its container */
+    object-fit: cover;
+}
+
+.home .redirect-button {
+    color: #6c5f44;
+}

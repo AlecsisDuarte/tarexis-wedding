@@ -1,14 +1,24 @@
 import "./styles/SaveTheDate.css";
 import std from "../assets/std1.png";
+import { FC } from "react";
 import { Link } from "react-router-dom";
+import dict from "../Dictionary.json";
 
-const SaveTheDate = () => {
+type Props = {
+  lang: string;
+};
+
+const SaveTheDate: FC<Props> = (prop) => {
+  const words = dict[prop.lang] ?? dict.en;
   return (
-    <div className="std-main">
-      <div>
+    <div className="std">
+      <div className="std-main">
         <img src={std}></img>
         <Link to="/travel" className="redirect-button">
-          Travel
+          {words.travel}
+        </Link>
+        <Link to="/home" className="redirect-button">
+          {words.home}
         </Link>
       </div>
     </div>

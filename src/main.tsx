@@ -9,17 +9,19 @@ import SaveTheDate from "./pages/SaveTheDate.tsx";
 const App = () => {
   const lang = navigator.language.split("-")[0];
   return (
+    <div className="main">
     <React.StrictMode>
       <BrowserRouter basename={"/tarexis-wedding/"}>
         <Routes>
-          <Route path="/" element={<SaveTheDate />} />
-          <Route path="/save-the-date" element={<SaveTheDate />} />
+          <Route path="/" element={<SaveTheDate lang={lang} />} />
+          <Route path="/save-the-date" element={<SaveTheDate lang={lang} />} />
           <Route path="/home" element={<Home lang={lang} />} />
           <Route path="/travel" element={<Travel />} />
-          <Route path="/Rsvp" element={<Rsvp />} />
+          <Route path="/Rsvp" element={<Rsvp lang={lang} />} />
         </Routes>
       </BrowserRouter>
     </React.StrictMode>
+    </div>
   );
 };
 
