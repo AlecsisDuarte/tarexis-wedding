@@ -15,7 +15,7 @@ const SaveTheDate: FC<Props> = (prop) => {
       <div className="std-main">
         <img src={std}></img>
         <div className="wip-container">
-          <p className="wip">Come back soon for more updates!</p>
+          <p className="wip">{words.wip}</p>
         </div>
         <Link to="/travel" className="redirect-button">
           {words.travel}

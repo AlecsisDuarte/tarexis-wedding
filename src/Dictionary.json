@@ -4,13 +4,15 @@
         "rsvp": "RSVP",
         "date": "4 - 6 September, 2026",
         "std": "Save the date",
-        "home": "Home"
+        "home": "Home",
+        "wip": "Come back soon for more updates!"
     },
     "es": {
         "travel": "Viajar",
         "rsvp": "RSVP",
         "date": "4 - 6 Septiembre, 2026",
         "std": "Apunta el dia",
-        "home": "Inicio"
+        "home": "Inicio",
+        "wip": "¡Vuelva pronto para mas información!"
     }
 }
