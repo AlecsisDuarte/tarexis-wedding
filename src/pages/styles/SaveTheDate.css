@@ -9,7 +9,7 @@
     display: flex; /* Enables Flexbox for centering */
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically */
-    min-height: 100vh; /* Ensures the div takes at least the full viewport height */
+    min-height: 80vh; /* Ensures the div takes at least the full viewport height */
     overflow: hidden; /* Hides any overflow if the image is larger than the screen */
     margin: 0; /* Removes default body margin */
     padding: 0; /* Removes default body padding */
@@ -18,7 +18,7 @@
 
 .std img {
     max-width: 100%; /* Ensures the image scales down to fit the screen width */
-    max-height: 100vh; /* Ensures the image scales down to fit the screen height */
+    max-height: 80vh; /* Ensures the image scales down to fit the screen height */
     height: auto; /* Maintains the image's aspect ratio */
     width: auto; /* Maintains the image's aspect ratio */
     display: block; /* Removes extra space below the image */
@@ -27,4 +27,18 @@
 
 .std .redirect-button {
   color: #6c5f44;
+  display: none;
+}
+
+.std .wip-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+}
+
+.std .wip {
+  font-family: Luminaire;
+  font-size: xxx-large;
+  color: #9c7e61;
 }
