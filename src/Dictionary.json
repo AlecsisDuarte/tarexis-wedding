@@ -1,18 +1,22 @@
 {
-    "en": {
-        "travel": "Travel",
-        "rsvp": "RSVP",
-        "date": "4 - 6 September, 2026",
-        "std": "Save the date",
-        "home": "Home",
-        "wip": "Come back soon for more updates!"
-    },
-    "es": {
-        "travel": "Viajar",
-        "rsvp": "RSVP",
-        "date": "4 - 6 Septiembre, 2026",
-        "std": "Apunta el dia",
-        "home": "Inicio",
-        "wip": "¡Vuelva pronto para mas información!"
-    }
+  "en": {
+    "travel": "Travel",
+    "rsvp": "RSVP",
+    "date": "4 - 6 September, 2026",
+    "std": "Save the date",
+    "home": "Home",
+    "events": "Events",
+    "faq": "FAQ",
+    "wip": "Come back soon for more updates!"
+  },
+  "es": {
+    "travel": "Viajar",
+    "rsvp": "RSVP",
+    "date": "4 - 6 Septiembre, 2026",
+    "std": "Apunta el dia",
+    "home": "Inicio",
+    "events": "Eventos",
+    "faq": "Preguntas frecuentes",
+    "wip": "¡Vuelva pronto para mas información!"
+  }
 }
