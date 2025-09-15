@@ -1,0 +1,157 @@
+.navbar {
+  background: #fdfaf6; /* A soft background color */
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 24px;
+}
+
+.navbar-logo {
+  color: rgb(156 126 96);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: "Luminaire-Script-Regular", serif;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  height: 80px;
+}
+
+.nav-links {
+  color: rgb(156 126 96);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+  font-family: "Wilden", sans-serif;
+  font-size: 1.1em;
+}
+
+.nav-links:hover {
+  text-decoration: underline;
+}
+
+.lang-toggle-btn {
+  background: #f8f8f8;
+  border: none;
+  color: #b48e5c;
+  font-weight: 500;
+  font-size: 1em;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-family: "Wilden", sans-serif;
+}
+
+.lang-toggle-desktop {
+  display: block;
+}
+
+.nav-item-mobile {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon .bar1,
+.menu-icon .bar2,
+.menu-icon .bar3 {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(156 126 96);
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* Burger to X animation */
+.menu-icon .bar1.open {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.menu-icon .bar2.open {
+  opacity: 0;
+}
+.menu-icon .bar3.open {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Mobile View */
+@media screen and (max-width: 960px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 80px);
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    background: #fdfaf6;
+  }
+
+  .nav-menu.active {
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-item {
+    width: 100%;
+    height: auto;
+  }
+
+  .nav-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .lang-toggle-desktop {
+    display: none;
+  }
+
+  .nav-item-mobile {
+    display: block;
+    padding: 2rem;
+    text-align: center;
+  }
+}

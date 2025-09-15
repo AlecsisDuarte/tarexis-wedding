@@ -1,0 +1,125 @@
+@font-face {
+  font-family: "MorningBrew-Regular";
+  src: url("./assets/fonts/MorningBrew-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Luminaire-Script-Regular";
+  src: url("./assets/fonts/Luminaire-Script-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Wilden";
+  src: url("./assets/fonts/Wilden.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  font-family:
+    "MorningBrew-Regular", "Luminaire-Script-Regular", system-ui, Avenir,
+    Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: #222;
+  background-color: #f8f8f8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #b48e5c;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #8c6b3f;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #67542f;
+}
+
+/* Card styles for sections */
+.card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(180, 142, 92, 0.08);
+  padding: 2.5rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+h1,
+h2 {
+  font-family: "Luminaire-Script-Regular", serif;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+  color: #b48e5c;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid #b48e5c;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #fff;
+  color: #b48e5c;
+  cursor: pointer;
+  transition:
+    border-color 0.25s,
+    background 0.25s;
+}
+button:hover {
+  border-color: #8c6b3f;
+  background: #f3e8d2;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto #b48e5c;
+}
+
+/* Make links white inside dialog boxes with brown background */
+.dialog-box a,
+.dialog-box a:visited {
+  color: #fff !important;
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #f8f8f8;
+    background-color: #222;
+  }
+  a {
+    color: #ffe4b5;
+  }
+  a:hover {
+    color: #ffd700;
+  }
+  button {
+    background-color: #333;
+    color: #ffe4b5;
+    border-color: #ffe4b5;
+  }
+}
