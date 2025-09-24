@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 @font-face {
   font-family: "MorningBrew-Regular";
   src: url("./assets/fonts/MorningBrew-Regular.ttf") format("truetype");
@@ -47,7 +48,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background: #67542f;
+  background: #66522a;
 }
 
 /* Card styles for sections */

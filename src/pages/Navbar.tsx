@@ -36,7 +36,11 @@ const Navbar: React.FC = () => {
         <ul className={menuOpen ? "nav-menu active" : "nav-menu"}>
           {navLinks.map((link) => (
             <li className="nav-item" key={link.href}>
-              <Link to={link.href} className="nav-links" onClick={closeMenu}>
+              <Link
+                to={link.href}
+                className="nav-links"
+                onClick={closeMenu}
+              >
                 {link.text}
               </Link>
             </li>
