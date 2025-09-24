@@ -3,36 +3,25 @@ import { useLanguage } from "../LanguageContext";
 
 const faqs = [
   {
-    id: "cash",
-    q: {
-      en: "Do I need cash?",
-      es: "¿Necesito llevar efectivo?",
-    },
-    a: {
-      en: "Most places in Mexico accept cards, but it's a good idea to have cash for tolls, as some don't accept cards (they do accept dollars).",
-      es: "La mayoría de los lugares en México aceptan tarjeta, pero es buena idea tener efectivo para las casetas, ya que algunas no aceptan tarjeta (sí aceptan dólares).",
-    },
-  },
-  {
     id: "children",
     q: {
       en: "Are children allowed?",
       es: "¿Se permiten niños?",
     },
     a: {
-      en: "Sorry, but no children allowed.",
+      en: "We kindly ask that our wedding be an adults-only celebration. Please leave the little ones at home so you can fully enjoy the festivities.",
       es: "Lo sentimos, pero no se permiten niños.",
     },
   },
   {
     id: "dress-code",
     q: {
-      en: "What's the dress code?",
+      en: "What's the Wedding Day Dress Code?",
       es: "¿Cuál es el código de vestimenta?",
     },
     a: {
-      en: "Formal.",
-      es: "Formal.",
+      en: "We ask that guests wear formal attire for our wedding ceremony. This means suits for men and flooqr-length dresses for the ladies. Please avoid wearing white or patterned dresses with a majority of white. If you have to ask, probably don't wear it.",
+      es: "El codigo de vestimenta es formal.",
     },
   },
   {
@@ -57,7 +46,7 @@ const faqs = [
       es: "Valle de Guadalupe es rural, por lo que se recomienda rentar un auto para explorar. Hay Ubers disponibles, pero pueden ser poco fiables, especialmente de noche. También puedes contratar un conductor privado. Considera compartir viajes con otros invitados.",
     },
   },
-    {
+  {
     id: "cross-to-mexico",
     q: {
       en: "How do I cross to Mexico?",
@@ -90,6 +79,17 @@ const faqs = [
       es: 'Sí, únete a nuestra <a href="https://chat.whatsapp.com/CrT869wmfyb9rOiBvBdh91" target="_blank" rel="noopener noreferrer">Comunidad de Whatsapp</a> para coordinar con otros invitados y recibir actualizaciones.',
     },
   },
+  {
+    id: "cash",
+    q: {
+      en: "Do I need cash?",
+      es: "¿Necesito llevar efectivo?",
+    },
+    a: {
+      en: "Most places in Mexico accept cards, but it's a good idea to have cash for tolls, as some don't accept cards (they do accept dollars).",
+      es: "La mayoría de los lugares en México aceptan tarjeta, pero es buena idea tener efectivo para las casetas, ya que algunas no aceptan tarjeta (sí aceptan dólares).",
+    },
+  },
 ];
 
 const Faq: React.FC = () => {
@@ -97,11 +97,11 @@ const Faq: React.FC = () => {
 
   return (
     <section style={{ color: "#fff", maxWidth: 700, margin: "0 auto" }}>
-      <h2 style={{ textAlign: "center", fontFamily: "Wilden, sans-serif", fontSize: "2.5em" }}>{t("faq")}</h2>
+      <h2 style={{ textAlign: "center", fontFamily: "EB Garamond, serif", fontSize: "2.5em" }}>{t("faq")}</h2>
       <div>
         {faqs.map((faq) => (
-          <div key={faq.id} style={{ marginBottom: "2em" }}>
-            <h3 style={{ fontFamily: "Wilden, sans-serif", fontSize: "1.5em", marginBottom: "0" }}>
+          <div key={faq.id} style={{ marginBottom: "2em", textAlign: "left" }}>
+            <h3 style={{ fontFamily: "EB Garamond, serif", fontSize: "1.5em", marginBottom: "0" }}>
               {faq.q[lang]}
             </h3>
             <p style={{ fontSize: "1.1em", lineHeight: "1.6" }} dangerouslySetInnerHTML={{ __html: faq.a[lang] }} />
