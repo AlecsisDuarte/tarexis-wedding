@@ -5,89 +5,89 @@ const faqs = [
   {
     id: "children",
     q: {
-      en: "Are children allowed?",
-      es: "¿Se permiten niños?",
+      en: "Can I bring my children?",
+      es: "¿Puedo llevar a mis hijos?",
     },
     a: {
       en: "We kindly ask that our wedding be an adults-only celebration. Please leave the little ones at home so you can fully enjoy the festivities.",
-      es: "Lo sentimos, pero no se permiten niños.",
+      es: "Les pedimos amablemente que nuestra boda sea una celebración solo para adultos. Dejen a los niños en casa para que puedan disfrutar de la fiesta.",
     },
   },
   {
     id: "dress-code",
     q: {
-      en: "What's the Wedding Day Dress Code?",
+      en: "What is the dress code?",
       es: "¿Cuál es el código de vestimenta?",
     },
     a: {
-      en: "We ask that guests wear formal attire for our wedding ceremony. This means suits for men and flooqr-length dresses for the ladies. Please avoid wearing white or patterned dresses with a majority of white. If you have to ask, probably don't wear it.",
-      es: "El codigo de vestimenta es formal.",
+      en: "Formal attire. For men, this means a suit. For women, a floor-length gown or a fancy cocktail dress",
+      es: "Vestimenta formal. Para los hombres, esto significa traje. Para las mujeres, un vestido largo, un vestido de cóctel elegante.",
     },
   },
   {
     id: "plus-ones",
     q: {
-      en: "Are plus ones allowed?",
-      es: "¿Se permiten acompañantes?",
+      en: "Can I bring a plus one?",
+      es: "¿Puedo llevar un acompañante?",
     },
     a: {
-      en: "Your invitation will specify who is invited. If you have questions, please reach out to us.",
-      es: "Tu invitación especificará quién está invitado. Si tienes dudas, contáctanos.",
+      en: "Our wedding is strictly RSVP-only. We will only be able to accommodate those specifically named on your invitation. Thank you for your understanding!",
+      es: "Nuestra boda es estrictamente solo con RSVP. Solo podremos acomodar a aquellos específicamente nombrados en su invitación. ¡Gracias por su comprensión!",
     },
   },
   {
     id: "get-around",
     q: {
-      en: "How do I get around?",
-      es: "¿Cómo me muevo?",
+      en: "How should I get around Valle de Guadalupe?",
+      es: "¿Cómo debería moverme por el Valle de Guadalupe?",
     },
     a: {
-      en: "Valle de Guadalupe is rural, so renting a car is recommended for exploring. Ubers are available but can be unreliable, especially at night. You can also hire a private driver. Consider sharing rides with other guests.",
-      es: "Valle de Guadalupe es rural, por lo que se recomienda rentar un auto para explorar. Hay Ubers disponibles, pero pueden ser poco fiables, especialmente de noche. También puedes contratar un conductor privado. Considera compartir viajes con otros invitados.",
+      en: "Valle de Guadalupe is a rural area with limited ride-sharing services. We highly recommend renting a car for the weekend to explore the region at your leisure. You can also hire a private driver for convenience. We encourage guests to coordinate and carpool!",
+      es: "El Valle de Guadalupe es una zona rural con servicios de transporte compartido limitados. Recomendamos encarecidamente alquilar un coche para el fin de semana para explorar la región a su gusto. También puede contratar a un conductor privado para su comodidad. ¡Animamos a los invitados a coordinar y compartir coche!",
     },
   },
   {
     id: "cross-to-mexico",
     q: {
-      en: "How do I cross to Mexico?",
-      es: "¿Cómo cruzo a México?",
+      en: "What do I need to know about crossing the border into Mexico?",
+      es: "¿Qué necesito saber para cruzar la frontera hacia México?",
     },
     a: {
-      en: "You can cross the San Diego/Tijuana border by car (San Ysidro or Otay Mesa) or on foot (PedEast or PedWest at San Ysidro). No special documents are needed to enter Mexico, but you'll need them to return to the US. Expect traffic, especially at peak times.",
-      es: "Puedes cruzar la frontera de San Diego/Tijuana en auto (San Ysidro u Otay Mesa) o a pie (PedEast o PedWest en San Ysidro). No se necesitan documentos especiales para entrar a México, pero los necesitarás para volver a EE.UU. Espera tráfico, especialmente en horas pico.",
+      en: "You can cross the San Diego/Tijuana border by car or on foot. While you don't need special documents to enter Mexico, you will need a valid passport or other WHTI-compliant document to return to the US. Be prepared for potential traffic, especially during peak hours.",
+      es: "Puedes cruzar la frontera de San Diego/Tijuana en coche o a pie. Aunque no necesitas documentos especiales para entrar a México, necesitarás un pasaporte válido u otro documento compatible con WHTI para regresar a los EE. UU. Prepárate para el posible tráfico, especialmente durante las horas pico.",
     },
   },
   {
     id: "cross-to-usa",
     q: {
-      en: "How do I cross back to the USA?",
-      es: "¿Cómo cruzo de regreso a Estados Unidos?",
+      en: "What about crossing back into the USA?",
+      es: "¿Y para volver a cruzar a los Estados Unidos?",
     },
     a: {
-      en: "To re-enter the US, you'll need a valid passport or other WHTI-compliant document. Wait times at the border can be long, so check online beforehand. Ready Lanes (for RFID documents) and SENTRI can speed up the process.",
-      es: "Para reingresar a EE.UU., necesitarás un pasaporte válido u otro documento compatible con WHTI. Los tiempos de espera en la frontera pueden ser largos, así que verifícalos en línea antes. Los carriles Ready (para documentos con RFID) y SENTRI pueden acelerar el proceso.",
+      en: "To re-enter the US, you'll need a valid passport or other WHTI-compliant document. Wait times can be long, so we recommend checking the U.S. Customs and Border Protection website for current wait times. Using a Ready Lane (for RFID-enabled documents) or SENTRI can significantly speed up your crossing.",
+      es: "Para reingresar a los EE. UU., necesitarás un pasaporte válido u otro documento compatible con WHTI. Los tiempos de espera pueden ser largos, por lo que recomendamos consultar el sitio web de Aduanas y Protección Fronteriza de los EE. UU. para conocer los tiempos de espera actuales. Usar un Ready Lane (para documentos con RFID) o SENTRI puede acelerar significativamente su cruce.",
     },
   },
   {
     id: "group-chats",
     q: {
-      en: "Are there group chats I can join?",
-      es: "¿Hay chats grupales a los que pueda unirme?",
+      en: "Is there a group chat for wedding guests?",
+      es: "¿Hay un chat grupal para los invitados a la boda?",
     },
     a: {
-      en: 'Yes, you can join this <a href="https://chat.whatsapp.com/CrT869wmfyb9rOiBvBdh91" target="_blank" rel="noopener noreferrer">Whatsapp Community</a> to coordinate with other guests and get updates.',
-      es: 'Sí, únete a nuestra <a href="https://chat.whatsapp.com/CrT869wmfyb9rOiBvBdh91" target="_blank" rel="noopener noreferrer">Comunidad de Whatsapp</a> para coordinar con otros invitados y recibir actualizaciones.',
+      en: 'Yes! We\'ve created a <a href="https://chat.whatsapp.com/CrT869wmfyb9rOiBvBdh91" target="_blank" rel="noopener noreferrer">Whatsapp Community</a> for everyone to connect, ask questions, and share travel plans. We\'d love for you to join!',
+      es: '¡Sí! Hemos creado una <a href="https://chat.whatsapp.com/CrT869wmfyb9rOiBvBdh91" target="_blank" rel="noopener noreferrer">Comunidad de Whatsapp</a> para que todos se conecten, hagan preguntas y compartan planes de viaje. ¡Nos encantaría que te unieras!',
     },
   },
   {
     id: "cash",
     q: {
-      en: "Do I need cash?",
-      es: "¿Necesito llevar efectivo?",
+      en: "Will I need cash?",
+      es: "¿Necesitaré efectivo?",
     },
     a: {
-      en: "Most places in Mexico accept cards, but it's a good idea to have cash for tolls, as some don't accept cards (they do accept dollars).",
-      es: "La mayoría de los lugares en México aceptan tarjeta, pero es buena idea tener efectivo para las casetas, ya que algunas no aceptan tarjeta (sí aceptan dólares).",
+      en: "While most places in Valle de Guadalupe take credit cards, we recommend bringing some cash (pesos or dollars) for smaller purchases and for highway tolls, which are often cash-only.",
+      es: "Aunque la mayoría de los lugares en el Valle de Guadalupe aceptan tarjetas de crédito, te recomendamos traer algo de efectivo (pesos o dólares) para compras pequeñas y para los peajes de la carretera, que a menudo solo aceptan efectivo.",
     },
   },
 ];
@@ -101,10 +101,10 @@ const Faq: React.FC = () => {
       <div>
         {faqs.map((faq) => (
           <div key={faq.id} style={{ marginBottom: "2em", textAlign: "left" }}>
-            <h3 style={{ fontFamily: "EB Garamond, serif", fontSize: "1.5em", marginBottom: "0" }}>
+            <h3 style={{ fontFamily: "EB Garamond, serif", fontSize: "1.5em", marginBottom: "0", fontStyle: "italic" }}>
               {faq.q[lang]}
             </h3>
-            <p style={{ fontSize: "1.1em", lineHeight: "1.6" }} dangerouslySetInnerHTML={{ __html: faq.a[lang] }} />
+            <p style={{ fontSize: "1.1em", lineHeight: "1.6"}} dangerouslySetInnerHTML={{ __html: faq.a[lang] }} />
           </div>
         ))}
       </div>
