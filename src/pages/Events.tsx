@@ -1,71 +1,82 @@
 import React from "react";
 import { useLanguage } from "../LanguageContext";
+import "./Events.css";
+import cuatroCuatros from "../assets/cuatro_cuatros.jpg";
+import villaDelValle from "../assets/la_villa_del_valle.jpg";
+import monteCova from "../assets/monte_cova.jpg";
 
-const events = {
-  en: [
-    {
-      title: "Wedding Ceremony & Reception",
-      date: "September 5, 2026",
-      location: "Monte Cova, Valle de Guadalupe",
-      description:
-        "Join us for the wedding celebration at Monte Cova, surrounded by the beautiful vineyards of Valle de Guadalupe.",
+const events = [
+  {
+    id: "welcome-dinner",
+    date: "September 4, 2026",
+    time: "4:00 PM",
+    location: "Cuatro Cuatros, Valle de Guadalupe",
+    title: {
+      en: "Welcome Dinner",
+      es: "Cena de Bienvenida",
     },
-    {
-      title: "Farewell Pool Party",
-      date: "September 6, 2026",
-      location: "Villa de Guadalupe",
-      description:
-        "Relax and enjoy a farewell pool party at Villa de Guadalupe before heading home.",
+    description: {
+      en: "Join us for a welcome dinner with drinks to kick off the wedding weekend.",
+      es: "Acompáñanos a una cena de bienvenida con bebidas para empezar el fin de semana de la boda.",
     },
-  ],
-  es: [
-    {
-      title: "Ceremonia y Recepción de la Boda",
-      date: "5 de Septiembre, 2026",
-      location: "Monte Cova, Valle de Guadalupe",
-      description:
-        "Acompáñanos a celebrar la boda en Monte Cova, rodeados de los hermosos viñedos de Valle de Guadalupe.",
+    image: cuatroCuatros,
+  },
+  {
+    id: "wedding",
+    date: "September 5, 2026",
+    time: "TBD",
+    location: "Monte Cova, Ensenada, Mexico",
+    title: {
+      en: "Wedding Ceremony & Reception",
+      es: "Ceremonia y Recepción de Boda",
     },
-    {
-      title: "Fiesta de despedida en la alberca",
-      date: "6 de Septiembre, 2026",
-      location: "Villa de Guadalupe",
-      description:
-        "Relájate y disfruta de una fiesta de despedida en la alberca de Villa de Guadalupe antes de regresar a casa.",
+    description: {
+      en: "The main event! We can't wait to celebrate our special day with you.",
+      es: "¡El evento principal! No podemos esperar para celebrar nuestro día especial contigo.",
     },
-  ],
-};
+    image: monteCova,
+  },
+  {
+    id: "pool-party",
+    date: "September 6, 2026",
+    time: "TBD",
+    location: "La Villa del Valle, Ensenada, Mexico",
+    title: {
+      en: "Farewell Pool Party Brunch",
+      es: "Brunch de Despedida en la Alberca",
+    },
+    description: {
+      en: "A relaxing pool party to say our goodbyes.",
+      es: "Una relajante fiesta en la alberca para despedirnos.",
+    },
+    image: villaDelValle,
+  },
+];
 
 const Events: React.FC = () => {
   const { t, lang } = useLanguage();
+
   return (
-    <section>
-      <h2>{t("events")}</h2>
-      {events[lang].map((event, idx) => (
-        <div
-          className="dialog-box"
-          key={idx}
-          style={{
-            background: "rgb(156 126 96)",
-            borderRadius: "14px",
-            boxShadow: "0 2px 12px rgba(156,126,96,0.10)",
-            padding: "1.5rem",
-            marginBottom: "2rem",
-            color: "#fff",
-          }}
-        >
-          <h3 style={{ color: "#fff", marginBottom: "0.5em" }}>
-            {event.title}
-          </h3>
-          <div style={{ fontWeight: 500, marginBottom: "0.3em" }}>
-            {event.date}
+    <section className="events-section">
+      <h2 className="events-title">{t("events")}</h2>
+      <div>
+        {events.map((event) => (
+          <div className="event-card" key={event.id}>
+            <div className="event-image">
+              <img src={event.image} alt={event.title[lang]} />
+            </div>
+            <div className="event-details">
+              <h3>{event.title[lang]}</h3>
+              <div className="event-info">
+                <div>{event.date}</div>
+                <div>{event.time}</div>
+                <div>{event.location}</div>
+              </div>
+              <p className="event-description">{event.description[lang]}</p>
+            </div>
           </div>
-          <div style={{ color: "#f3e8d2", marginBottom: "0.7em" }}>
-            {event.location}
-          </div>
-          <p style={{ color: "#f3e8d2" }}>{event.description}</p>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
 };

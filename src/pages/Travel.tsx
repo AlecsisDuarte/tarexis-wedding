@@ -28,9 +28,7 @@ const transport = {
           href="https://wa.me/526461327874"
           target="_blank"
           rel="noopener noreferrer"
-        >
-          +52 1 646 132 7874
-        </a>
+        >+52 1 646 132 7874</a>
         .
       </>
     ),
@@ -90,7 +88,7 @@ const Travel: React.FC = () => {
   const { t, lang } = useLanguage();
   return (
     <section>
-      <h2>{t("travel")}</h2>
+    <h2 className="events-title">{t("travel")}</h2>
 
       {/* Hotels Section */}
       <div
