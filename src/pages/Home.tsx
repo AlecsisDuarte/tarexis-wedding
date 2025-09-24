@@ -39,9 +39,9 @@ const Home: React.FC = () => {
       <div
         style={{
           color: "rgb(156 126 96)",
-          fontSize: "1.6em",
+          fontSize: "2.2em",
           marginTop: "2rem",
-          fontFamily: "MorningBrew-Regular",
+          fontFamily: "Luminaire-Script-Regular, serif",
         }}
       >
         {t("wip")}

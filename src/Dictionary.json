@@ -6,7 +6,7 @@
     "std": "Save the date",
     "home": "Home",
     "events": "Events",
-    "faq": "FAQ",
+    "faq": "FAQs",
     "wip": "Come back soon for more updates!"
   },
   "es": {
@@ -16,7 +16,7 @@
     "std": "Apunta el dia",
     "home": "Inicio",
     "events": "Eventos",
-    "faq": "Preguntas frecuentes",
+    "faq": "Mas info",
     "wip": "¡Vuelva pronto para mas información!"
   }
 }
