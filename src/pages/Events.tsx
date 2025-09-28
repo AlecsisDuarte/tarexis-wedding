@@ -73,6 +73,7 @@ const events = [
     id: "welcome-party",
     date: "September 4, 2026",
     time: "6pm - 10pm",
+    venue: "Bloodlust Winebar",
     location: "Bloodlust Winebar, Valle de Guadalupe",
     title: {
       en: "Welcome Party",
@@ -88,6 +89,7 @@ const events = [
     id: "wedding",
     date: "September 5, 2026",
     time: "4pm - 12am",
+    venue: "Monte Cova",
     location: "Monte Cova, Ensenada, Mexico",
     title: {
       en: "Wedding Ceremony & Reception",
@@ -103,6 +105,7 @@ const events = [
     id: "pool-party",
     date: "September 6, 2026",
     time: "12pm - 4pm",
+    venue: "La Villa del Valle",
     location: "La Villa del Valle, Ensenada, Mexico",
     title: {
       en: "Farewell Pool Party Brunch",
@@ -142,12 +145,12 @@ const Events: React.FC = () => {
                       rel="noopener noreferrer"
                       className="event-link"
                     >
-                      {event.location}
+                      {event.venue}
                     </a>
                   </div>
                 </div>
                 <p className="event-description">{event.description[lang]}</p>
-
+{/* 
                 {calendarUrl && (
                   <a
                     href={calendarUrl}
@@ -157,7 +160,7 @@ const Events: React.FC = () => {
                   >
                     Add to Calendar
                   </a>
-                )}
+                )} */}
               </div>
             </div>
           );

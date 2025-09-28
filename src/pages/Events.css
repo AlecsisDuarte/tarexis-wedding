@@ -22,10 +22,6 @@
   transition: transform 0.3s ease;
 }
 
-.event-card:hover {
-  transform: translateY(-5px);
-}
-
 .event-card:nth-child(even) .event-image {
   order: 2;
 }
@@ -51,6 +47,7 @@
   font-size: 2em;
   margin-top: 0;
   margin-bottom: 0.5rem;
+  font-weight: 400;
 }
 
 .event-info {
@@ -84,4 +81,39 @@
 
 .event-link:hover {
   background-color: #e0d1b9;
+}
+
+@media (max-width: 800px) {
+  .event-card {
+    flex-direction: column;
+  }
+
+  .events-section {
+    padding: 0.5rem;
+  }
+
+  .event-card:nth-child(even) .event-image {
+    order: 0;
+  }
+
+  .event-image {
+    min-width: auto;
+  }
+
+  .event-image img {
+    max-height: 200px;
+  }
+
+  .event-details {
+    padding: 1rem;
+  }
+
+  .event-details h3 {
+    font-size: 1.8em;
+    line-height: 90%;
+  }
+
+  .event-info div {
+    font-size: 1em;
+  }
 }
