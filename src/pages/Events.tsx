@@ -12,36 +12,75 @@ const generateGoogleMapsUrl = (address: string) => {
 };
 
 const generateGoogleCalendarUrl = (event: any) => {
-  const [startTimeStr, endTimeStr] = event.time.split(' - ');
-  const startTime = new Date(`${event.date} ${startTimeStr}`);
-  const endTime = new Date(`${event.date} ${endTimeStr}`);
+  try {
+    if (event.time === "TBD") {
+      return "";
+    }
 
-  const formatDate = (date: Date) => {
-    return date.toISOString().replace(/-|:|\..*Z/g, "");
-  };
+    const parseTime = (timeStr: string) => {
+      const match = RegExp(/(\d+)(am|pm)/).exec(timeStr);
+      if (!match) return null;
 
-  return `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
-    event.title.en
-  )}&dates=${formatDate(startTime)}/${formatDate(
-    endTime
-  )}&details=${encodeURIComponent(
-    event.description.en
-  )}&location=${encodeURIComponent(event.location)}`;
+      let hour = parseInt(match[1], 10);
+      const ampm = match[2];
+
+      if (ampm === "pm" && hour !== 12) {
+        hour += 12;
+      }
+      if (ampm === "am" && hour === 12) {
+        hour = 0;
+      }
+      return hour;
+    };
+
+    const [startTimeStr, endTimeStr] = event.time.split(" - ");
+    const startHour = parseTime(startTimeStr);
+    const endHour = parseTime(endTimeStr);
+
+    if (startHour === null || endHour === null) {
+      return "";
+    }
+
+    const startDate = new Date(event.date);
+    startDate.setHours(startHour);
+
+    const endDate = new Date(event.date);
+    endDate.setHours(endHour);
+
+    if (endDate < startDate) {
+      endDate.setDate(endDate.getDate() + 1);
+    }
+
+    const formatDate = (date: Date) => {
+      return date.toISOString().replace(/-|:|\..*Z/g, "");
+    };
+
+    return `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
+      event.title.en
+    )}&dates=${formatDate(startDate)}/${formatDate(
+      endDate
+    )}&details=${encodeURIComponent(
+      event.description.en
+    )}&location=${encodeURIComponent(event.location)}`;
+  } catch (error) {
+    console.error("Error generating calendar URL:", error);
+    return "";
+  }
 };
 
 const events = [
   {
-    id: "welcome-dinner",
+    id: "welcome-party",
     date: "September 4, 2026",
     time: "6pm - 10pm",
     location: "Bloodlust Winebar, Valle de Guadalupe",
     title: {
-      en: "Welcome Dinner",
-      es: "Cena de Bienvenida",
+      en: "Welcome Party",
+      es: "Fiesta de Bienvenida",
     },
     description: {
-      en: "Join us for a welcome dinner with drinks to kick off the wedding weekend.",
-      es: "Acompáñanos a una cena de bienvenida con bebidas para empezar el fin de semana de la boda.",
+      en: "Join us for a welcome party at Bloodlust winebar ($), to help us kick-off the weeding weekend.",
+      es: "Acompáñanos a una fiesta de bienvenida en Bloodlust winebar ($), para empezar el fin de semana de la boda.",
     },
     image: bloodlust,
   },
@@ -84,40 +123,45 @@ const Events: React.FC = () => {
     <section className="events-section">
       <h2 className="events-title">{t("events")}</h2>
       <div>
-        {events.map((event) => (
-          <div className="event-card" key={event.id}>
-            <div className="event-image">
-              <img src={event.image} alt={event.title[lang]} />
-            </div>
-            <div className="event-details">
-              <h3>{event.title[lang]}</h3>
-              <div className="event-info">
-                <div>{event.date}</div>
-                <div>{event.time}</div>
-                <div>
+        {events.map((event) => {
+          const calendarUrl = generateGoogleCalendarUrl(event);
+          return (
+            <div className="event-card" key={event.id}>
+              <div className="event-image">
+                <img src={event.image} alt={event.title[lang]} />
+              </div>
+              <div className="event-details">
+                <h3>{event.title[lang]}</h3>
+                <div className="event-info">
+                  <div>{event.date}</div>
+                  <div style={{ fontSize: "1em" }}>{event.time}</div>
+                  <div>
+                    <a
+                      href={generateGoogleMapsUrl(event.location)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="event-link"
+                    >
+                      {event.location}
+                    </a>
+                  </div>
+                </div>
+                <p className="event-description">{event.description[lang]}</p>
+
+                {calendarUrl && (
                   <a
-                    href={generateGoogleMapsUrl(event.location)}
+                    href={calendarUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="event-link"
                   >
-                    {event.location}
+                    Add to Calendar
                   </a>
-                </div>
+                )}
               </div>
-              <p className="event-description">{event.description[lang]}</p>
-
-              <a
-                href={generateGoogleCalendarUrl(event)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="event-link"
-              >
-                Add to Calendar
-              </a>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
