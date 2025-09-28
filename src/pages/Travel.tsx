@@ -1,156 +1,97 @@
 import React from "react";
-import { useLanguage } from "../LanguageContext";
-import { Link } from "react-router-dom";
-
-const hotels = [
-  {
-    name: {
-      en: "Los Amantes",
-      es: "Los Amantes",
-    },
-    description: {
-      en: "A boutique hotel in Valle de Guadalupe. They welcome you with a little surprise.",
-      es: "Un hotel boutique en Valle de Guadalupe. Te reciben con una pequeña sorpresa.",
-    },
-  },
-  // Add more hotels here if needed
-];
-
-const transport = {
-  en: {
-    title: "Transportation",
-    description: (
-      <>
-        If you need taxi-like transportation, <b>Lomas Travel</b> is a
-        recommended agent. They can arrange transportation from either San Diego
-        or Tijuana. Contact them via their Business Whatsapp:{" "}
-        <a
-          href="https://wa.me/526461327874"
-          target="_blank"
-          rel="noopener noreferrer"
-        >+52 1 646 132 7874</a>
-        .
-      </>
-    ),
-  },
-  es: {
-    title: "Transporte",
-    description: (
-      <>
-        Si necesitas transporte tipo taxi, <b>Lomas Travel</b> es un agente
-        recomendado. Ellos pueden organizar transporte desde San Diego o
-        Tijuana. Contáctalos por Whatsapp empresarial:{" "}
-        <a
-          href="https://wa.me/526461327874"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          +52 1 646 132 7874
-        </a>
-        .
-      </>
-    ),
-  },
-};
-
-const recommendations = {
-  en: {
-    title: "Things to do",
-    description: (
-      <>
-        Discover more about the region, wineries, and activities:{" "}
-        <Link
-          to="/exploring-baja"
-          style={{ color: "#b48e5c", textDecoration: "underline" }}
-        >
-          Exploring Baja
-        </Link>
-      </>
-    ),
-  },
-  es: {
-    title: "Recomendaciones",
-    description: (
-      <>
-        Descubre más sobre la región, viñedos y actividades:{" "}
-        <Link
-          to="/exploring-baja"
-          style={{ color: "#b48e5c", textDecoration: "underline" }}
-        >
-          Explorando Baja
-        </Link>
-      </>
-    ),
-  },
-};
+import "./Travel.css";
 
 const Travel: React.FC = () => {
-  const { t, lang } = useLanguage();
   return (
-    <section>
-    <h2 className="events-title">{t("travel")}</h2>
+    <div className="travel-container">
+      <h1 className="travel-title">Travel</h1>
 
-      {/* Hotels Section */}
-      <div
-        className="dialog-box"
-        style={{
-          background: "rgb(156 126 96)",
-          borderRadius: "14px",
-          boxShadow: "0 2px 12px rgba(156,126,96,0.10)",
-          padding: "1.5rem",
-          marginBottom: "2rem",
-          color: "#fff",
-        }}
-      >
-        <h3 style={{ color: "#fff", marginBottom: "0.7em" }}>
-          {lang === "en" ? "Recommended Hotels" : "Hoteles recomendados"}
-        </h3>
-        {hotels.map((hotel, idx) => (
-          <div key={idx} style={{ marginBottom: "1.2em" }}>
-            <div style={{ fontWeight: 600 }}>{hotel.name[lang]}</div>
-            <div style={{ color: "#f3e8d2" }}>{hotel.description[lang]}</div>
+      <section className="travel-section">
+        <h2>Getting In</h2>
+        <div className="getting-in-columns">
+          <div className="column">
+            <h3>From United States</h3>
+            <p>
+              The most convenient airport for reaching Valle de Guadalupe from
+              San Diego is San Diego International Airport (SAN).
+            </p>
+            <h4>By Car</h4>
+            <p>
+              If you choose to fly to San Diego you have a couple of options for
+              crossing the border and driving to Valle de Guadalupe.
+            </p>
+            <h4>By Foot</h4>
+            <p>
+              From San Diego Airport, you can take a taxi or rideshare
+              (Uber/Lyft) to the San Ysidro border crossing. This is often the
+              quickest way to cross the border on foot.
+            </p>
+            <p>Once you've walked across into Tijuana, you can rent a car.</p>
+            <p>
+              <strong>Travel Tip:</strong> Be prepared for potential wait times
+              at the border, especially on weekends or holidays. Check current
+              border wait times (link to CBP border wait times website, if
+              desired). Ensure you have your valid passport ready!
+            </p>
+            <h4>By Car</h4>
+            <p>
+              You can drive any car over the border (rental or your own).
+              However, if you have Global Entry, you can pre-register your car
+              and join a faster line to cross.
+            </p>
           </div>
-        ))}
-      </div>
-
-      {/* Transportation Section */}
-      <div
-        className="dialog-box"
-        style={{
-          background: "rgb(156 126 96)",
-          borderRadius: "14px",
-          boxShadow: "0 2px 12px rgba(156,126,96,0.10)",
-          padding: "1.5rem",
-          marginBottom: "2rem",
-          color: "#fff",
-        }}
-      >
-        <h3 style={{ color: "#fff", marginBottom: "0.7em" }}>
-          {transport[lang].title}
-        </h3>
-        <div style={{ color: "#f3e8d2" }}>{transport[lang].description}</div>
-      </div>
-
-      {/* Recommendations Section */}
-      <div
-        className="dialog-box"
-        style={{
-          background: "rgb(156 126 96)",
-          borderRadius: "14px",
-          boxShadow: "0 2px 12px rgba(156,126,96,0.10)",
-          padding: "1.5rem",
-          marginBottom: "2rem",
-          color: "#fff",
-        }}
-      >
-        <h3 style={{ color: "#fff", marginBottom: "0.7em" }}>
-          {recommendations[lang].title}
-        </h3>
-        <div style={{ color: "#f3e8d2" }}>
-          {recommendations[lang].description}
+          <div className="column">
+            <h3>From Mexico</h3>
+            <p>
+              The most convenient airport for reaching Valle de Guadalupe from
+              Mexico is Tijuana International Airport (TIJ) in Mexico.
+            </p>
+            <p>
+              Once you've crossed into Tijuana, you'll navigate through the city
+              to connect to the toll road (Mexico Federal Highway 1D, or
+              "Carretera Escénica").
+            </p>
+            <p>
+              From Ensenada, follow signs for Mexico Federal Highway 3
+              ("Carretera Ensenada-Tecate" or "La Ruta del Vino"), which will
+              take you into the heart of Valle de Guadalupe.
+            </p>
+            <p>
+              <strong>Travel Tip:</strong> The driving time from to Valle de
+              Guadalupe is typically one and a half to two hours, plus border
+              crossing time. Be aware that traffic in Tijuana can be heavy,
+              especially during peak hours.
+            </p>
+            <p>
+              If you are interested in a group shuttle from San Diego please
+              fill out this form.
+            </p>
+            <p>
+              The cost per person is estimated to be $XX.XX and requires at
+              least 15 people to opt in for us to book it.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="travel-section">
+        <h2>Where to Stay</h2>
+        <p>
+          We recommend booking your accommodations as soon as possible, as Valle
+          de Guadalupe is a popular destination. Here are a few suggestions:
+        </p>
+        {/* Add your hotel and accommodation recommendations here */}
+      </section>
+
+      <section className="travel-section">
+        <h2>Moving Around</h2>
+        <p>
+          Once you're in Valle de Guadalupe, we recommend the following for
+          getting around:
+        </p>
+        {/* Add your transportation recommendations here */}
+      </section>
+    </div>
   );
 };
 
