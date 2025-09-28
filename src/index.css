@@ -30,6 +30,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --reddish-color: #8c4d4d; /* Dark Red/Maroon */
+  --peachy-color: #f4e3dc; /* Light Peach/Pink */
+  --transparent-peachy-color: rgba(140, 77, 77, 0.4); /* A semi-transparent version of the primary color */
+  --dark-brown: #66522a; /* Dark Brown */
 }
 
 a {
@@ -48,7 +52,6 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background: #66522a;
 }
 
 /* Card styles for sections */

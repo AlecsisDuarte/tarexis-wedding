@@ -1,16 +1,16 @@
 .travel-container {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   max-width: 900px;
   margin: 0 auto;
   padding: 40px 20px;
-  color: #333;
+  color: var(--dark-brown);
 }
 
 .travel-title {
-  font-size: 3em;
   text-align: center;
-  margin-bottom: 40px;
-  font-weight: normal;
+  font-family: "EB Garamond", serif;
+  font-size: 2.5em;
+  margin-bottom: 2rem;
 }
 
 .travel-section {
@@ -19,10 +19,13 @@
 
 .travel-section h2 {
   font-size: 2em;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--transparent-peachy-color);
   padding-bottom: 10px;
   margin-bottom: 20px;
   font-weight: normal;
+  font-family: "EB Garamond", serif;
+  text-transform: uppercase;
+  text-align: left;
 }
 
 .getting-in-columns {

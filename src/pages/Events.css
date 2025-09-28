@@ -2,7 +2,7 @@
   max-width: 900px;
   margin: 0 auto;
   padding: 1rem;
-  color: #fff;
+  color: var(--dark-brown);
 }
 
 .events-title {
@@ -22,7 +22,7 @@
   content: '';
   position: absolute;
   width: 2px;
-  background-color: #f3e8d2;
+  background-color: var(--transparent-peachy-color);
   top: 0;
   bottom: 0;
   left: 50%;
@@ -75,7 +75,7 @@
 .timeline-date-time {
   text-transform: uppercase;
   font-size: 1em;
-  color: #f3e8d2;
+  color: var(--dark-brown);
   margin-bottom: 0.5rem;
   display: inline-block;
   text-decoration: none;
@@ -83,7 +83,7 @@
 }
 
 .timeline-date-time:hover {
-  color: #fff;
+  color: var(--transparent-peachy-color);
 }
 
 .timeline-title {
@@ -103,12 +103,12 @@
 }
 
 .timeline-venue a {
-  color: #f3e8d2;
+  color: var(--dark-brown);
 }
 
 .timeline-description {
   font-size: 1em;
-  color: #f3e8d2;
+  color: var(--dark-brown);
   line-height: 1.6;
 }
 

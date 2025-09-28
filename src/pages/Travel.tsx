@@ -4,7 +4,7 @@ import "./Travel.css";
 const Travel: React.FC = () => {
   return (
     <div className="travel-container">
-      <h1 className="travel-title">Travel</h1>
+      <h1 className="pages-titles">Travel</h1>
 
       <section className="travel-section">
         <h2>Getting In</h2>

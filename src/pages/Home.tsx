@@ -1,6 +1,7 @@
 import React from "react";
 import { useLanguage } from "../LanguageContext";
 import std from "../assets/std_date_location.png"; // ES module import
+import "./Home.css";
 
 const Home: React.FC = () => {
   const { t, lang } = useLanguage();

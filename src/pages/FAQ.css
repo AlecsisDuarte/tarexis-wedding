@@ -1,0 +1,28 @@
+.faq-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  color: var(--dark-brown);
+}
+
+.faq-item {
+  margin-bottom: 2em;
+  text-align: left;
+}
+
+.faq-question {
+  font-family: "EB Garamond", serif;
+  font-size: 1.5em;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.faq-answer {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.faq-wip {
+  text-align: center;
+  margin-top: 2em;
+}

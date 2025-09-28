@@ -1,5 +1,6 @@
 import React from "react";
 import { useLanguage } from "../LanguageContext";
+import "./FAQ.css";
 
 const faqs = [
   {
@@ -75,8 +76,8 @@ const faqs = [
       es: "¿Hay un chat grupal para los invitados a la boda?",
     },
     a: {
-      en: 'Yes! We\'ve created a <a href="https://chat.whatsapp.com/CrT869wmfyb9rOiBvBdh91" target="_blank" rel="noopener noreferrer">Whatsapp Community</a> for everyone to connect, ask questions, and share travel plans. We\'d love for you to join!',
-      es: '¡Sí! Hemos creado una <a href="https://chat.whatsapp.com/CrT869wmfyb9rOiBvBdh91" target="_blank" rel="noopener noreferrer">Comunidad de Whatsapp</a> para que todos se conecten, hagan preguntas y compartan planes de viaje. ¡Nos encantaría que te unieras!',
+      en: "Yes! We've created a <a href=\"https://chat.whatsapp.com/CrT869wmfyb9rOiBvBdh91\" target=\"_blank\" rel=\"noopener noreferrer\">Whatsapp Community</a> for everyone to connect, ask questions, and share travel plans. We'd love for you to join!",
+      es: "¡Sí! Hemos creado una <a href=\"https://chat.whatsapp.com/CrT869wmfyb9rOiBvBdh91\" target=\"_blank\" rel=\"noopener noreferrer\">Comunidad de Whatsapp</a> para que todos se conecten, hagan preguntas y compartan planes de viaje. ¡Nos encantaría que te unieras!",
     },
   },
   {
@@ -96,19 +97,20 @@ const Faq: React.FC = () => {
   const { t, lang } = useLanguage();
 
   return (
-    <section style={{ color: "#fff", maxWidth: 700, margin: "0 auto" }}>
-      <h2 style={{ textAlign: "center", fontFamily: "EB Garamond, serif", fontSize: "2.5em" }}>{t("faq")}</h2>
+    <section className="faq-section">
+      <h2 className="pages-titles">{t("faq")}</h2>
       <div>
         {faqs.map((faq) => (
-          <div key={faq.id} style={{ marginBottom: "2em", textAlign: "left" }}>
-            <h3 style={{ fontFamily: "EB Garamond, serif", fontSize: "1.5em", marginBottom: "0", fontStyle: "italic" }}>
-              {faq.q[lang]}
-            </h3>
-            <p style={{ fontSize: "1.1em", lineHeight: "1.6"}} dangerouslySetInnerHTML={{ __html: faq.a[lang] }} />
+          <div key={faq.id} className="faq-item">
+            <h3 className="faq-question">{faq.q[lang]}</h3>
+            <p
+              className="faq-answer"
+              dangerouslySetInnerHTML={{ __html: faq.a[lang] }}
+            />
           </div>
         ))}
       </div>
-      <p style={{ textAlign: "center", marginTop: "2em" }}>{t("wip")}</p>
+      <p className="faq-wip">{t("wip")}</p>
     </section>
   );
 };

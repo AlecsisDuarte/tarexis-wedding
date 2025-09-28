@@ -1,5 +1,5 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Events from "./pages/Events";
@@ -9,6 +9,16 @@ import ExploringBaja from "./pages/ExploringBaja";
 import Navbar from "./pages/Navbar";
 
 const App: React.FC = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/") {
+      document.body.style.backgroundColor = "var(--dark-brown)";
+    } else {
+      document.body.style.backgroundColor = "var(--peachy-color)";
+    }
+  }, [location]);
+
   return (
     <div style={{ fontFamily: "sans-serif", margin: 0, padding: 0 }}>
       <Navbar />

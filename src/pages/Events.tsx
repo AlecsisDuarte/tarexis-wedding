@@ -96,7 +96,7 @@ const Events: React.FC = () => {
 
   return (
     <section className="events-section">
-      <h2 className="events-title">{t("events")}</h2>
+      <h2 className="pages-titles">{t("events")}</h2>
       <div className="timeline">
         {events.map((event, index) => {
           const calendarUrl = generateGoogleCalendarUrl(event, lang);
