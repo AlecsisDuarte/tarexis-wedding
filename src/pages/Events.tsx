@@ -1,9 +1,6 @@
 import React from "react";
 import { useLanguage } from "../LanguageContext";
 import "./Events.css";
-import bloodlust from "../assets/bloodlust.webp";
-import villaDelValle from "../assets/la_villa_del_valle.jpg";
-import monteCova from "../assets/monte_cova.jpg";
 
 const generateGoogleMapsUrl = (address: string) => {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
@@ -11,56 +8,22 @@ const generateGoogleMapsUrl = (address: string) => {
   )}`;
 };
 
-const generateGoogleCalendarUrl = (event: any) => {
+const generateGoogleCalendarUrl = (event: any, lang: string) => {
   try {
-    if (event.time === "TBD") {
-      return "";
-    }
-
-    const parseTime = (timeStr: string) => {
-      const match = RegExp(/(\d+)(am|pm)/).exec(timeStr);
-      if (!match) return null;
-
-      let hour = parseInt(match[1], 10);
-      const ampm = match[2];
-
-      if (ampm === "pm" && hour !== 12) {
-        hour += 12;
-      }
-      if (ampm === "am" && hour === 12) {
-        hour = 0;
-      }
-      return hour;
-    };
-
-    const [startTimeStr, endTimeStr] = event.time.split(" - ");
-    const startHour = parseTime(startTimeStr);
-    const endHour = parseTime(endTimeStr);
-
-    if (startHour === null || endHour === null) {
-      return "";
-    }
-
-    const startDate = new Date(event.date);
-    startDate.setHours(startHour);
-
-    const endDate = new Date(event.date);
-    endDate.setHours(endHour);
-
-    if (endDate < startDate) {
-      endDate.setDate(endDate.getDate() + 1);
-    }
+    const startDate = new Date(event.start);
+    const endDate = new Date(event.start);
+    endDate.setHours(startDate.getHours() + event.durationInHours);
 
     const formatDate = (date: Date) => {
       return date.toISOString().replace(/-|:|\..*Z/g, "");
     };
 
     return `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
-      event.title.en
+      event.title[lang]
     )}&dates=${formatDate(startDate)}/${formatDate(
       endDate
     )}&details=${encodeURIComponent(
-      event.description.en
+      event.description[lang]
     )}&location=${encodeURIComponent(event.location)}`;
   } catch (error) {
     console.error("Error generating calendar URL:", error);
@@ -71,8 +34,12 @@ const generateGoogleCalendarUrl = (event: any) => {
 const events = [
   {
     id: "welcome-party",
-    date: "September 4, 2026",
-    time: "6pm - 10pm",
+    when: {
+      en: "Friday, September 4th at 6:00 pm",
+      es: "Viernes, 4 de Septiembre a las 6 pm",
+    },
+    start: "2026-09-04T18:00:00Z",
+    durationInHours: 4,
     venue: "Bloodlust Winebar",
     location: "Bloodlust Winebar, Valle de Guadalupe",
     title: {
@@ -83,39 +50,44 @@ const events = [
       en: "Join us for a welcome party at Bloodlust winebar ($), to help us kick-off the weeding weekend.",
       es: "Acompáñanos a una fiesta de bienvenida en Bloodlust winebar ($), para empezar el fin de semana de la boda.",
     },
-    image: bloodlust,
   },
   {
     id: "wedding",
-    date: "September 5, 2026",
-    time: "4pm - 12am",
+    when: {
+      en: "Saturday, September 5th at 4:00 pm",
+      es: "Sabado, 5 de Septiembre a las 4 pm",
+    },
+    start: "2026-09-05T16:00:00Z",
+    durationInHours: 8,
     venue: "Monte Cova",
     location: "Monte Cova, Ensenada, Mexico",
     title: {
-      en: "Wedding Ceremony & Reception",
-      es: "Ceremonia y Recepción de Boda",
+      en: "Ceremony & Reception",
+      es: "Ceremonia & Recepción",
     },
     description: {
       en: "The main event! We can't wait to celebrate our special day with you.",
       es: "¡El evento principal! No podemos esperar para celebrar nuestro día especial contigo.",
     },
-    image: monteCova,
   },
   {
     id: "pool-party",
-    date: "September 6, 2026",
-    time: "12pm - 4pm",
+    when: {
+      en: "Sunday, September 6th at 12:00 pm",
+      es: "Domingo, 6 de Septiembre a las 12 pm",
+    },
+    start: "2026-09-06T12:00:00Z",
+    durationInHours: 4,
     venue: "La Villa del Valle",
     location: "La Villa del Valle, Ensenada, Mexico",
     title: {
-      en: "Farewell Pool Party Brunch",
-      es: "Brunch de Despedida en la Alberca",
+      en: "Pelo del perro pool party",
+      es: "Pelo del perro pool party",
     },
     description: {
       en: "A relaxing pool party to say our goodbyes.",
       es: "Una relajante fiesta en la alberca para despedirnos.",
     },
-    image: villaDelValle,
   },
 ];
 
@@ -125,42 +97,35 @@ const Events: React.FC = () => {
   return (
     <section className="events-section">
       <h2 className="events-title">{t("events")}</h2>
-      <div>
-        {events.map((event) => {
-          const calendarUrl = generateGoogleCalendarUrl(event);
+      <div className="timeline">
+        {events.map((event, index) => {
+          const calendarUrl = generateGoogleCalendarUrl(event, lang);
+          const alignment = index % 2 === 0 ? "left" : "right";
           return (
-            <div className="event-card" key={event.id}>
-              <div className="event-image">
-                <img src={event.image} alt={event.title[lang]} />
-              </div>
-              <div className="event-details">
-                <h3>{event.title[lang]}</h3>
-                <div className="event-info">
-                  <div>{event.date}</div>
-                  <div style={{ fontSize: "1em" }}>{event.time}</div>
-                  <div>
-                    <a
-                      href={generateGoogleMapsUrl(event.location)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="event-link"
-                    >
-                      {event.venue}
-                    </a>
-                  </div>
-                </div>
-                <p className="event-description">{event.description[lang]}</p>
-{/* 
-                {calendarUrl && (
+            <div className={`timeline-item ${alignment}`} key={event.id}>
+              <div className="timeline-content">
+                <a
+                  href={calendarUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="timeline-date-time"
+                >
+                  {event.when[lang]}
+                </a>
+                <h3 className="timeline-title">{event.title[lang]}</h3>
+                <div className="timeline-venue">
+                  at{" "}
                   <a
-                    href={calendarUrl}
+                    href={generateGoogleMapsUrl(event.location)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="event-link"
                   >
-                    Add to Calendar
+                    {event.venue}
                   </a>
-                )} */}
+                </div>
+                <p className="timeline-description">
+                  {event.description[lang]}
+                </p>
               </div>
             </div>
           );
