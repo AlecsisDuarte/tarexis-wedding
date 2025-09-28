@@ -1,4 +1,3 @@
-
 .events-section {
   max-width: 900px;
   margin: 0 auto;
@@ -68,4 +67,20 @@
   font-size: 1em;
   line-height: 1.6;
   color: #f3e8d2;
+}
+
+.event-link {
+  display: inline-block;
+  background-color: #f3e8d2;
+  color: #8a6d4c;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.event-link:hover {
+  background-color: #e0d1b9;
 }
