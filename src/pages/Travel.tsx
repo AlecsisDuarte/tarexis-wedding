@@ -4,7 +4,7 @@ import "./Travel.css";
 import { useLanguage } from "../LanguageContext";
 import elCielo from "../assets/el_cielo.jpg";
 import carreteraTijuanaEnsenada from "../assets/carretera_tijuana_ensenada.jpg";
-import monteCova from "../assets/monte_cova.jpg";
+import drivingInValle from "../assets/driving_in_valle.jpg";
 
 const Travel: React.FC = () => {
   const { t } = useLanguage();
@@ -90,15 +90,17 @@ const Travel: React.FC = () => {
 
       <section className="travel-section travel-section-left">
         <img
-          src={monteCova}
-          alt="Monte Cova"
-          className="travel-section-image"
+          src={drivingInValle}
+          alt="Driving in Valle"
+          className="travel-section-image moving-around-image"
         />
-        <div className="travel-section-content">
+        <div className="travel-section-content moving-around-content">
           <h2 className="travel-section-title">{t("movingAround")}</h2>
-          <p>{t("gettingAroundTip")}</p>
-          <p>
-            <strong>{t("lomasTravel")}</strong>
+          <p>{t("movingAroundContent_1")}</p>
+          <p className="moving-around-links-p">
+            {t("movingAroundContent_2")}
+            <Link to="/valle-de-guadalupe-guide">{t("movingAroundContent_link")}</Link>
+            {t("movingAroundContent_3")}
           </p>
         </div>
       </section>

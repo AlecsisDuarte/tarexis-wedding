@@ -78,9 +78,17 @@
   width: 50%;
 }
 
+.moving-around-image {
+  width: 50%;
+}
+
+.moving-around-content {
+  width: 50%;
+}
+
 .hotel {
   margin-bottom: 0; /* Reduce vertical space between hotel blocks */
-  padding: 0 25px;
+  padding: 0 60px;
 }
 
 .hotel .hotel-name {
@@ -99,7 +107,8 @@
   text-decoration: none;
 }
 
-.getting-in-links-p a {
+.getting-in-links-p a,
+.moving-around-links-p a {
   font-family: "Wilden", serif;
   color: var(--dark-brown);
 }
