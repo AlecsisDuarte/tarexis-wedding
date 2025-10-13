@@ -99,6 +99,11 @@
   text-decoration: none;
 }
 
+.getting-in-links-p a {
+  font-family: "Wilden", serif;
+  color: var(--dark-brown);
+}
+
 .column p {
   line-height: 1.6;
   margin-bottom: 15px;

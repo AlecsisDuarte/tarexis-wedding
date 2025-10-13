@@ -77,33 +77,14 @@ const Travel: React.FC = () => {
 <div className="travel-section-content getting-in-content">
           <h2 className="travel-section-title">{t("gettingIn")}</h2>
           <p>{t("gettingInIntro_p1")}</p>
-          <p>{t("gettingInIntro_p2")}</p>
-          <p>
-            <strong>{t("gettingInIntro_remindersTitle")}</strong>
+
+          <p dangerouslySetInnerHTML={{ __html: t("gettingInIntro_remindersTitle") }} />
+          <p className="getting-in-links-p">
+            {t("gettingInIntro_p3_1")}
+            <Link to="/from-san-diego">{t("gettingInIntro_p3_link1")}</Link>
+            {t("gettingInIntro_p3_2")}
+            <Link to="/from-tijuana">{t("gettingInIntro_p3_link2")}</Link>
           </p>
-          <ul>
-            <li>
-              <strong>{t("gettingInIntro_reminders_p1_title")}</strong>
-              {t("gettingInIntro_reminders_p1_text")}
-            </li>
-            <li>
-              <strong>{t("gettingInIntro_reminders_p2_title")}</strong>
-              {t("gettingInIntro_reminders_p2_text")}
-            </li>
-            <li>
-              <strong>{t("gettingInIntro_reminders_p3_title")}</strong>
-              {t("gettingInIntro_reminders_p3_text")}
-            </li>
-          </ul>
-          <p>{t("gettingInIntro_p3")}</p>
-          <div className="getting-in-links">
-            <Link to="/from-usa" className="travel-link">
-              {t("fromUSContent2")}
-            </Link>
-            <Link to="/from-mexico" className="travel-link">
-              {t("fromMXContent")}
-            </Link>
-          </div>
         </div>
       </section>
 

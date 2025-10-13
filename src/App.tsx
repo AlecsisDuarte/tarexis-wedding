@@ -6,6 +6,8 @@ import Events from "./pages/Events";
 import Travel from "./pages/Travel";
 import Faq from "./pages/FAQ";
 import ExploringBaja from "./pages/ExploringBaja";
+import FromSanDiego from "./pages/FromSanDiego";
+import FromTijuana from "./pages/FromTijuana";
 import Navbar from "./pages/Navbar";
 
 const App: React.FC = () => {
@@ -37,6 +39,8 @@ const App: React.FC = () => {
           <Route path="/travel" element={<Travel />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/exploring-baja" element={<ExploringBaja />} />
+          <Route path="/from-san-diego" element={<FromSanDiego />} />
+          <Route path="/from-tijuana" element={<FromTijuana />} />
         </Routes>
       </main>
     </div>
