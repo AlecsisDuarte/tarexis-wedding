@@ -54,7 +54,7 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: #f3e8d2;
+  background-color: var(--peachy-color);
   border: 2px solid #8a6d4c;
   top: 1.5em;
   z-index: 1;

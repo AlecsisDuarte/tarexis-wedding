@@ -6,19 +6,12 @@
   color: var(--dark-brown);
 }
 
-.travel-title {
-  text-align: center;
-  font-family: "EB Garamond", serif;
-  font-size: 2.5em;
-  margin-bottom: 2rem;
-}
-
 .travel-section {
   margin-bottom: 40px;
 }
 
 .travel-section h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   border-bottom: 1px solid var(--transparent-peachy-color);
   padding-bottom: 10px;
   margin-bottom: 20px;
@@ -54,4 +47,29 @@
 .column p {
   line-height: 1.6;
   margin-bottom: 15px;
+}
+
+.collapsible-header {
+  cursor: pointer;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 0.5rem;
+}
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible-content.open {
+  max-height: 500px; /* Adjust as needed */
+}
+
+@media (max-width: 768px) {
+  .getting-in-columns {
+    flex-direction: column;
+  }
+  .column {
+    width: 100%;
+  }
 }
