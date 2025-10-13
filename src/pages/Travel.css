@@ -7,24 +7,38 @@
 }
 
 .travel-section {
+  display: flex;
+  gap: 20px;
   margin-bottom: 40px;
+  align-items: center;
+}
+
+.travel-section-left {
+  flex-direction: row;
+}
+
+.travel-section-right {
+  flex-direction: row-reverse;
+}
+
+.travel-section-image {
+  width: 40%;
+  height: auto;
+  object-fit: cover;
+}
+
+.travel-section-content {
+  width: 60%;
+  padding: 0 20px;
 }
 
 .travel-section h2 {
   font-size: 1.5em;
-  border-bottom: 1px solid var(--transparent-peachy-color);
-  padding-bottom: 10px;
   margin-bottom: 20px;
   font-weight: normal;
   font-family: "EB Garamond", serif;
   text-transform: uppercase;
   text-align: left;
-}
-
-.getting-in-columns {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
 }
 
 .column {
@@ -42,6 +56,47 @@
   margin-top: 20px;
   margin-bottom: 10px;
   font-weight: bold;
+}
+
+.hotel-name {
+  font-family: "Wilden", serif;
+}
+
+.where-to-stay-image {
+  width: 50%;
+}
+
+.where-to-stay-content {
+  width: 50%;
+}
+
+.getting-in-image {
+  width: 50%;
+}
+
+.getting-in-content {
+  width: 50%;
+}
+
+.hotel {
+  margin-bottom: 0; /* Reduce vertical space between hotel blocks */
+  padding: 0 25px;
+}
+
+.hotel .hotel-name {
+  margin-top: 0;
+  margin-bottom: 0; /* Reduce space below hotel name */
+}
+
+.hotel p {
+  margin-top: 0;
+  margin-bottom: 0; /* Remove bottom margin from paragraph */
+  line-height: 1.4;
+}
+
+.hotel a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .column p {
@@ -66,8 +121,13 @@
 }
 
 @media (max-width: 768px) {
-  .getting-in-columns {
-    flex-direction: column;
+  .travel-section {
+    flex-direction: column !important;
+  }
+
+  .travel-section-image,
+  .travel-section-content {
+    width: 100%;
   }
   .column {
     width: 100%;
