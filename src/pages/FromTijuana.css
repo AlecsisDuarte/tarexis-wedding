@@ -1,0 +1,37 @@
+.from-tijuana-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  color: var(--dark-brown);
+  text-align: left;
+}
+
+.from-tijuana-container h2 {
+  font-size: 1.5em;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+  font-family: "EB Garamond", serif;
+  text-transform: uppercase;
+}
+
+.from-tijuana-container h3 {
+  font-size: 1.2em;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.from-tijuana-container ul {
+  padding-left: 20px;
+}
+
+.from-tijuana-container li {
+  margin-bottom: 0.5rem;
+}
+
+.page-link {
+  font-family: "Wilden", serif;
+  color: var(--dark-brown);
+  font-weight: bold;
+}

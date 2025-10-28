@@ -1,0 +1,48 @@
+.valle-de-guadalupe-guide-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  color: var(--dark-brown);
+  text-align: left;
+}
+
+.valle-de-guadalupe-guide-container h2 {
+  font-size: 1.5em;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+  font-family: "EB Garamond", serif;
+  text-transform: uppercase;
+}
+
+.valle-de-guadalupe-guide-container h3 {
+  font-size: 1.2em;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.valle-de-guadalupe-guide-container ul {
+  padding-left: 20px;
+}
+
+.valle-de-guadalupe-guide-container li {
+  margin-bottom: 0.5rem;
+}
+
+.valle-de-guadalupe-guide-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+.valle-de-guadalupe-guide-container th,
+.valle-de-guadalupe-guide-container td {
+  border: 1px solid var(--dark-brown);
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.valle-de-guadalupe-guide-container th {
+  background-color: var(--peachy-color);
+}
