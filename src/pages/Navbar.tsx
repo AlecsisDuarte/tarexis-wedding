@@ -16,9 +16,9 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { href: "/", text: t("home") },
-/*     { href: "/events", text: t("events") },
+    { href: "/events", text: t("events") },
     { href: "/travel", text: t("travel") },
-    { href: "/faq", text: t("faq") }, */
+    { href: "/faq", text: t("faq") },
   ];
 
   return (
@@ -36,11 +36,7 @@ const Navbar: React.FC = () => {
         <ul className={menuOpen ? "nav-menu active" : "nav-menu"}>
           {navLinks.map((link) => (
             <li className="nav-item" key={link.href}>
-              <Link
-                to={link.href}
-                className="nav-links"
-                onClick={closeMenu}
-              >
+              <Link to={link.href} className="nav-links" onClick={closeMenu}>
                 {link.text}
               </Link>
             </li>
