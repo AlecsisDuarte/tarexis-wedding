@@ -63,6 +63,18 @@ const Travel: React.FC = () => {
               </a>
               <p>{t("hotelEntrevalleDesc")}</p>
             </div>
+            <div className="hotel">
+              <a
+                href="https://encuentrocollection.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h4 className="hotel-name">
+                  {t("hotelEncuentroGuadalupeName")}
+                </h4>
+              </a>
+              <p>{t("hotelEncuentroGuadalupeDesc")}</p>
+            </div>
           </div>
           <p>{t("whereToStayOutro")}</p>
         </div>
@@ -74,11 +86,19 @@ const Travel: React.FC = () => {
           alt="Carretera Tijuana Ensenada"
           className="travel-section-image getting-in-image"
         />
-<div className="travel-section-content getting-in-content">
+        <div className="travel-section-content getting-in-content">
           <h2 className="travel-section-title">{t("gettingIn")}</h2>
-          <p>{t("gettingInIntro_p1")}</p>
+          <p
+            className="getting-in-links-p"
+            dangerouslySetInnerHTML={{ __html: t("gettingInIntro_p1") }}
+          />
 
-          <p dangerouslySetInnerHTML={{ __html: t("gettingInIntro_remindersTitle") }} />
+          <p
+            className="getting-in-links-p"
+            dangerouslySetInnerHTML={{
+              __html: t("gettingInIntro_remindersTitle"),
+            }}
+          />
           <p className="getting-in-links-p">
             {t("gettingInIntro_p3_1")}
             <Link to="/from-san-diego">{t("gettingInIntro_p3_link1")}</Link>
@@ -99,7 +119,9 @@ const Travel: React.FC = () => {
           <p>{t("movingAroundContent_1")}</p>
           <p className="moving-around-links-p">
             {t("movingAroundContent_2")}
-            <Link to="/valle-de-guadalupe-guide">{t("movingAroundContent_link")}</Link>
+            <Link to="/valle-de-guadalupe-guide">
+              {t("movingAroundContent_link")}
+            </Link>
             {t("movingAroundContent_3")}
           </p>
         </div>

@@ -34,7 +34,7 @@
     "whereToStayIntro": "Here are some of the hotels we have stayed at that we recommend",
     "whereToStayOutro": "We'll try to set up buses from the hotels where most of you are staying. Also, don't be afraid to explore other hotels or Airbnbs in the area - Valle is always changing and has some amazing hidden gems!",
     "hotelOptions": "Hotel Options",
-    "gettingInIntro_p1": "Getting into Valle de Guadalupe, also known as the Napa of Mexico, is really easy. You can fly into either San Diego, CA (SAN) or Tijuana, B.C. (TIJ) airports. From there, you can rent a car, schedule a transportation service, or if you're in Tijuana, order an Uber. From either airport, it's a scenic 1.5 to 2-hour drive down to the valley.",
+    "gettingInIntro_p1": "Getting into Valle de Guadalupe, also known as the Napa of Mexico, is really easy. You can fly into either San Diego, CA (SAN) or Tijuana, B.C. (TIJ) airports. From there, you can rent a car, schedule a transportation service (we recommend reaching out to Alejandro Macias from Lomas Travel through their <a href=\"https://wa.me/c/5216461327874\" target=\"_blank\" rel=\"noopener noreferrer\">WhatsApp business account</a>), or if you're in Tijuana, order an Uber. From either airport, it's a scenic 1.5 to 2-hour drive down to the valley.",
     "gettingInIntro_remindersTitle": "Just as a reminder, <strong>don't forget your passport</strong>. Also, if you have <strong>Global Entry</strong>, make sure to bring it as it might come in handy. And don't forget to <strong>bring some cash</strong> (dollars are accepted) for tolls or souvenirs.",
     "gettingInIntro_p3_1": "For more information you can visit ",
     "gettingInIntro_p3_link1": "Getting in from San Diego",
@@ -50,7 +50,6 @@
     "hotelAguaDeVidDesc": "A modern hotel with a lively atmosphere, offering a variety of room types and a central location.",
     "hotelElCielo": "El Cielo Winery & Resort",
     "hotelEncuentroGuadalupe": "Encuentro Guadalupe",
-    "hotelEncuentroGuadalupeDesc": "Unique eco-pods set on a hillside, offering a one-of-a-kind experience with breathtaking views.",
     "hotelBruma": "Bruma",
     "hotelBrumaDesc": "A chic and sustainable hotel with a winery, restaurant, and a focus on design and nature.",
     "airbnb": "Airbnb",
@@ -64,7 +63,9 @@
     "hotelLosAmantesName": "Los Amantes",
     "hotelLosAmantesDesc": "For those looking to stay in a fun and interesting place.",
     "hotelEntrevalleName": "Entrevalle",
-    "hotelEntrevalleDesc": "For those on a budget that still want their hot tubs and pool."
+    "hotelEntrevalleDesc": "For those on a budget that still want their hot tubs and pool.",
+    "hotelEncuentroGuadalupeName": "Encuentro Guadalupe",
+    "hotelEncuentroGuadalupeDesc": "Valley views from the hills."
   },
   "es": {
     "travel": "Viajar",
@@ -101,7 +102,7 @@
     "whereToStayIntro": "Aquí hay algunos de los hoteles en los que nos hemos hospedado y que recomendamos.",
     "whereToStayOutro": "Intentaremos organizar autobuses desde los hoteles donde se hospede la mayoría de ustedes. Además, no duden en explorar otros hoteles o Airbnbs en la zona. ¡Valle siempre está cambiando y tiene algunas joyas escondidas increíbles!",
     "hotelOptions": "Opciones de Hotel",
-    "gettingInIntro_p1": "Llegar al Valle de Guadalupe, también conocido como el Napa de México, es muy fácil. Puedes volar a los aeropuertos de San Diego, CA (SAN) o Tijuana, B.C. (TIJ). Desde allí, puedes alquilar un coche, programar un servicio de transporte o, si estás en Tijuana, pedir un Uber. Desde cualquiera de los aeropuertos, es un viaje panorámico de 1.5 a 2 horas hasta el valle.",
+    "gettingInIntro_p1": "Llegar al Valle de Guadalupe, también conocido como el Napa de México, es muy fácil. Puedes volar a los aeropuertos de San Diego, CA (SAN) o Tijuana, B.C. (TIJ). Desde allí, puedes alquilar un coche, programar un servicio de transporte (recomendamos contactar a Alejandro Macias de Lomas Travel a través de su <a href=\"https://wa.me/c/5216461327874\" target=\"_blank\" rel=\"noopener noreferrer\">cuenta de WhatsApp business</a>) o, si estás en Tijuana, pedir un Uber. Desde cualquiera de los aeropuertos, es un viaje panorámico de 1.5 a 2 horas hasta el valle.",
     "gettingInIntro_remindersTitle": "Solo como recordatorio, <strong>no olvides tu pasaporte</strong>. Además, si tienes <strong>Global Entry</strong>, asegúrate de traerlo, ya que podría ser útil. Y no olvides <strong>traer algo de efectivo</strong> (aceptan dólares) para peajes o souvenirs.",
     "gettingInIntro_p3_1": "Para más información puedes visitar ",
     "gettingInIntro_p3_link1": "Llegando desde San Diego",
@@ -116,9 +117,7 @@
     "hotelAguaDeVid": "Agua de Vid",
     "hotelAguaDeVidDesc": "Un hotel moderno con un ambiente animado, que ofrece una variedad de tipos de habitaciones y una ubicación céntrica.",
     "hotelElCielo": "El Cielo Winery & Resort",
-    "hotelElCieloDesc": "Un resort de lujo con impresionantes vistas a los viñedos, perfecto para una estancia relajante y placentera.",
     "hotelEncuentroGuadalupe": "Encuentro Guadalupe",
-    "hotelEncuentroGuadalupeDesc": "Eco-pods únicos ubicados en una ladera, que ofrecen una experiencia única con vistas impresionantes.",
     "hotelBruma": "Bruma",
     "hotelBrumaDesc": "Un hotel elegante y sostenible con una bodega, restaurante y un enfoque en el diseño y la naturaleza.",
     "airbnb": "Airbnb",
@@ -132,6 +131,8 @@
     "hotelLosAmantesName": "Los Amantes",
     "hotelLosAmantesDesc": "Para un lugar divertido.",
     "hotelEntrevalleName": "Entrevalle",
-    "hotelEntrevalleDesc": "Para una experiencia tipo cabañas con albercas y jacuzzis."
+    "hotelEntrevalleDesc": "Para una experiencia tipo cabañas con albercas y jacuzzis.",
+    "hotelEncuentroGuadalupeName": "Encuentro Guadalupe",
+    "hotelEncuentroGuadalupeDesc": "Vistas al valle desde las colinas."
   }
 }
